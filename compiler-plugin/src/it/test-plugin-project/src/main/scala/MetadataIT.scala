@@ -1,7 +1,7 @@
 package uk.ac.liv.oforero.metadata_it
 
 object MetadataIT {
-  import uk.ac.liv.oforero.metadata.plain.Metadata._
+  import scalajutsu.experimental.metadata.plain.Metadata._
 
   def doStuff {
     assert( 5 == (5 addMeta ("serializable" → true)))

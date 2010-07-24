@@ -1,4 +1,4 @@
 <plugin>
-  <name>currency-literals</name>
-  <classname>uk.ac.liv.oforero.metadata.plugin.MetadataPlugin</classname>
+  <name>metadata-plugin</name>
+  <classname>scalajutsu.experimental.metadata.plugin.MetadataPlugin</classname>
 </plugin>

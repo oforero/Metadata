@@ -19,7 +19,7 @@
  *   Dissertation Adviser: Dr. Yanguo Jing
  */
 
-package uk.ac.liv.oforero.metadata_it
+package scalajutsu.experimental.metadata_it
 
 import org.junit.runner.RunWith
 import org.scalatest.matchers.ShouldMatchers

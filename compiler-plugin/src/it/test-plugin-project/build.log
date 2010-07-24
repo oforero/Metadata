@@ -4,55 +4,58 @@
 [INFO]    task-segment: [clean, integration-test]
 [INFO] ------------------------------------------------------------------------
 [INFO] [clean:clean {execution: default-clean}]
-[INFO] Deleting directory /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target
+[INFO] Deleting directory /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/target
 [INFO] [scala:add-source {execution: default}]
-[INFO] Add Source directory: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/main/scala
-[INFO] Add Test Source directory: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/test/scala
+[INFO] Add Source directory: /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/src/main/scala
+[INFO] Add Test Source directory: /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/src/test/scala
 [INFO] [resources:resources {execution: default-resources}]
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/src/main/resources
 [INFO] [compiler:compile {execution: default-compile}]
 [INFO] Nothing to compile - all classes are up to date
 [INFO] [scala:compile {execution: default}]
 [INFO] Checking for multiple versions of scala
 [INFO] includes = [**/*.scala,**/*.java,]
 [INFO] excludes = []
-[INFO] /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/main/scala:-1: info: compiling
-[INFO] Compiling 1 source files to /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/classes at 1280011729176
-[INFO] Processing tree: scala.this.Predef.assert(5.==(uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))))
+[INFO] /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/src/main/scala:-1: info: compiling
+[INFO] Compiling 1 source files to /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/target/classes at 1280015700484
+[INFO] Processing tree: scala.this.Predef.assert(5.==(scalajutsu.experimental.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))))
 [INFO] tree has: class scala.reflect.generic.Trees$Select
-[INFO] swapping class java.lang.String
-[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))
+[INFO] Processing tree: scalajutsu.experimental.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))
 [INFO] tree has: class scala.reflect.generic.Trees$Select
-[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5)
+[INFO] Processing tree: scalajutsu.experimental.metadata.plain.Metadata.any2Metadata[Int](5)
 [INFO] tree has: class scala.reflect.generic.Trees$TypeApply
 [INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)
 [INFO] tree has: class scala.reflect.generic.Trees$TypeApply
 [INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable")
 [INFO] tree has: class scala.reflect.generic.Trees$TypeApply
-[INFO] Processing tree: scala.this.Predef.assert(uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)).==(5))
+[INFO] Processing tree: scala.this.Predef.assert(scalajutsu.experimental.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)).==(5))
 [INFO] tree has: class scala.reflect.generic.Trees$Select
-[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))
+[INFO] Processing tree: scalajutsu.experimental.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))
 [INFO] tree has: class scala.reflect.generic.Trees$Select
-[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5)
+[INFO] Processing tree: scalajutsu.experimental.metadata.plain.Metadata.any2Metadata[Int](5)
 [INFO] tree has: class scala.reflect.generic.Trees$TypeApply
 [INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)
 [INFO] tree has: class scala.reflect.generic.Trees$TypeApply
 [INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable")
 [INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[WARNING] /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/src/main/scala/MetadataIT.scala:7: warning: comparing values of types Int and scalajutsu.experimental.metadata.Metadata[Int] using `==' will always yield false
+[INFO]     assert( 5 == (5 addMeta ("serializable" ? true)))
+[INFO]               ^
+[WARNING] one warning found
 [INFO] prepare-compile in 0 s
 [INFO] compile in 4 s
 [INFO] [resources:testResources {execution: default-testResources}]
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/test/resources
+[INFO] skip non existing resourceDirectory /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/src/test/resources
 [INFO] [compiler:testCompile {execution: default-testCompile}]
 [INFO] Nothing to compile - all classes are up to date
 [INFO] [scala:testCompile {execution: default}]
 [INFO] Checking for multiple versions of scala
 [INFO] includes = [**/*.scala,**/*.java,]
 [INFO] excludes = []
-[INFO] /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/test/scala:-1: info: compiling
-[INFO] Compiling 1 source files to /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/test-classes at 1280011733378
+[INFO] /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/src/test/scala:-1: info: compiling
+[INFO] Compiling 1 source files to /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/target/test-classes at 1280015704631
 [INFO] Processing tree: MetadataSpec.this.convertToWordSpecStringWrapper("An object").when(MetadataSpec.this.convertToStringShouldWrapper("enriched with metadata").should({
 [INFO]   import uk.ac.liv.oforero.metadata.plain.Metadata._;
 [INFO]   val a: uk.ac.liv.oforero.metadata.Metadata[Int] = uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true));
@@ -164,26 +167,26 @@
 [INFO] prepare-compile in 0 s
 [INFO] compile in 5 s
 [INFO] [surefire:test {execution: default-test}]
-[INFO] Surefire report directory: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/surefire-reports
+[INFO] Surefire report directory: /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/target/surefire-reports
 
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
-Running uk.ac.liv.oforero.metadata_it.MetadataSpec
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.35 sec
-An object (when enriched with metadata) should be equal to other without metadata(uk.ac.liv.oforero.metadata_it.MetadataSpec)  Time elapsed: 0.005 sec
-An object (when enriched with metadata) should be assignable to another variable of the underlying type(uk.ac.liv.oforero.metadata_it.MetadataSpec)  Time elapsed: 0 sec
+Running scalajutsu.experimental.metadata_it.MetadataSpec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.358 sec
+An object (when enriched with metadata) should be equal to other without metadata(scalajutsu.experimental.metadata_it.MetadataSpec)  Time elapsed: 0.005 sec
+An object (when enriched with metadata) should be assignable to another variable of the underlying type(scalajutsu.experimental.metadata_it.MetadataSpec)  Time elapsed: 0 sec
 
 Results :
 
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] [jar:jar {execution: default-jar}]
-[INFO] Building jar: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/metadata-plugin-it-1.0-SNAPSHOT.jar
+[INFO] Building jar: /Users/Oscar/Projects/dissertation/implementation/Scalajutsu/Metadata/compiler-plugin/src/it/test-plugin-project/target/metadata-plugin-it-0.5-SNAPSHOT.jar
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESSFUL
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 12 seconds
-[INFO] Finished at: Sun Jul 25 00:48:59 CEST 2010
+[INFO] Total time: 13 seconds
+[INFO] Finished at: Sun Jul 25 01:55:11 CEST 2010
 [INFO] Final Memory: 35M/81M
 [INFO] ------------------------------------------------------------------------

@@ -1,34 +1,22 @@
 /*
- *    _   _       _               __  __ ____           ____  _____               
- *   | | | | ___ | |             |  \/  / ___|  ___    / ___|| ____|_ __   __ _   
- *   | | | |/ _ \| |      _____  | |\/| \___ \ / __|   \___ \|  _| | '_ \ / _` |  
- *   | |_| | (_) | |___  |_____| | |  | |___) | (__ _   ___) | |___| | | | (_| |_ 
- *    \___/ \___/|_____|         |_|  |_|____/ \___(_) |____/|_____|_| |_|\__, (_)
- *                                                                        |___/   
+ *      _____            __          _        __
+ *     / ___/_________ _/ /____ _   (_)__  __/ /________  __
+ *     \__ \/ ___/ __ `/ // __ `/  / // / / / __/ ___/ / / /
+ *    ___/ / /__/ /_/ / // /_/ /  / // /_/ / /_(__  ) /_/ /
+ *   /____/\___/\__,_/_/ \__,_/__/ / \__,_/\__/____/\__,_/
+ *                            /___/
  *
- *   Copyright (c) 2010. Oscar Forero
- *   This code is being developed for the partial fulfilment of the requirements
- *   for the degree of MSc. in Software Engineering at the University of Liverpool.
- *   Any total or partial reproduction of this code is strictly forbidden,
- *   unless is related to the creation or assessment of this project.
+ *   Copyright (c) 2010, Oscar Forero & Scalajutsu Contributors
+ *   All rights reserved.
  *
- *   Tittle: Development of a Financial Domain Specific Language for the Java Virtual Machine in Scala & Clojure
- *   Student: Oscar Mauricio Forero Carrillo
- *   Student ID: 15112165
- *   Email: oscar.forerocarrillo@my.ohecampus.com
- *   Dissertation Adviser: Dr. Yanguo Jing
  */
-
-package uk.ac.liv.oforero.metadata.plugin
+package scalajutsu.experimental.metadata.plugin
 
 /**
  * TODO: Write description here!!
  *
  * @author Oscar Forero
  * @version 1.0
- * 
- * Date: Apr 18, 2010
- * Time: 5:33:58 PM
  * 
  */
 

@@ -1,16 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>uk.ac.liv.oforero</groupId>
+  <groupId>scalajutsu.experimental</groupId>
   <artifactId>metadata-plugin-it</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.5-SNAPSHOT</version>
   <name>Testing the metadata plugin</name>
 
   <properties>
     <scala.version>2.8.0</scala.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <metadata.plugin>/Users/Oscar/.m2/repository/uk/ac/liv/oforero/metadata-plugin/1.0-SNAPSHOT/metadata-plugin-1.0-SNAPSHOT.jar</metadata.plugin>
+    <metadata.plugin>/Users/Oscar/.m2/repository/scalajutsu/experimental/metadata/plugin/0.5-SNAPSHOT/plugin-0.5-SNAPSHOT.jar</metadata.plugin>
   </properties>
 
   <dependencies>
@@ -20,9 +20,9 @@
       <version>${scala.version}</version>
     </dependency>
     <dependency>
-      <groupId>uk.ac.liv.oforero</groupId>
-      <artifactId>metadata</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <groupId>scalajutsu.experimental.metadata</groupId>
+      <artifactId>library</artifactId>
+      <version>0.5-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
