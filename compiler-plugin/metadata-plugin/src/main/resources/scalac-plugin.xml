@@ -1,4 +1,0 @@
-<plugin>
-  <name>currency-literals</name>
-  <classname>uk.ac.liv.oforero.metadata.plugin.MetadataPlugin</classname>
-</plugin>
