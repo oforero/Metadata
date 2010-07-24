@@ -1,0 +1,189 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Testing the metadata plugin
+[INFO]    task-segment: [clean, integration-test]
+[INFO] ------------------------------------------------------------------------
+[INFO] [clean:clean {execution: default-clean}]
+[INFO] Deleting directory /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target
+[INFO] [scala:add-source {execution: default}]
+[INFO] Add Source directory: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/main/scala
+[INFO] Add Test Source directory: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/test/scala
+[INFO] [resources:resources {execution: default-resources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/main/resources
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [scala:compile {execution: default}]
+[INFO] Checking for multiple versions of scala
+[INFO] includes = [**/*.scala,**/*.java,]
+[INFO] excludes = []
+[INFO] /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/main/scala:-1: info: compiling
+[INFO] Compiling 1 source files to /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/classes at 1280011729176
+[INFO] Processing tree: scala.this.Predef.assert(5.==(uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] swapping class java.lang.String
+[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5)
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable")
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: scala.this.Predef.assert(uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)).==(5))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5)
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable")
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] prepare-compile in 0 s
+[INFO] compile in 4 s
+[INFO] [resources:testResources {execution: default-testResources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/test/resources
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [scala:testCompile {execution: default}]
+[INFO] Checking for multiple versions of scala
+[INFO] includes = [**/*.scala,**/*.java,]
+[INFO] excludes = []
+[INFO] /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/src/test/scala:-1: info: compiling
+[INFO] Compiling 1 source files to /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/test-classes at 1280011733378
+[INFO] Processing tree: MetadataSpec.this.convertToWordSpecStringWrapper("An object").when(MetadataSpec.this.convertToStringShouldWrapper("enriched with metadata").should({
+[INFO]   import uk.ac.liv.oforero.metadata.plain.Metadata._;
+[INFO]   val a: uk.ac.liv.oforero.metadata.Metadata[Int] = uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true));
+[INFO]   MetadataSpec.this.convertToWordSpecStringWrapper("be equal to other without metadata").in({
+[INFO]     MetadataSpec.this.assert(a.==(5));
+[INFO]     MetadataSpec.this.assert(a.hasMeta);
+[INFO]     MetadataSpec.this.assert(a.hasMeta("serializable"));
+[INFO]     MetadataSpec.this.assert(5.==(a));
+[INFO]     var c: Int = 3;
+[INFO]     MetadataSpec.this.assert(c.+(2).==(a))
+[INFO]   });
+[INFO]   MetadataSpec.this.convertToWordSpecStringWrapper("be assignable to another variable of the underlying type").in({
+[INFO]     val b: Int = uk.ac.liv.oforero.metadata.plain.Metadata.meta2Any[Int](a);
+[INFO]     MetadataSpec.this.assert(a.==(b));
+[INFO]     MetadataSpec.this.assert(b.==(a))
+[INFO]   })
+[INFO] })(MetadataSpec.this.subjectRegistrationFunction))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.convertToWordSpecStringWrapper("An object")
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.convertToStringShouldWrapper("enriched with metadata").should({
+[INFO]   import uk.ac.liv.oforero.metadata.plain.Metadata._;
+[INFO]   val a: uk.ac.liv.oforero.metadata.Metadata[Int] = uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true));
+[INFO]   MetadataSpec.this.convertToWordSpecStringWrapper("be equal to other without metadata").in({
+[INFO]     MetadataSpec.this.assert(a.==(5));
+[INFO]     MetadataSpec.this.assert(a.hasMeta);
+[INFO]     MetadataSpec.this.assert(a.hasMeta("serializable"));
+[INFO]     MetadataSpec.this.assert(5.==(a));
+[INFO]     var c: Int = 3;
+[INFO]     MetadataSpec.this.assert(c.+(2).==(a))
+[INFO]   });
+[INFO]   MetadataSpec.this.convertToWordSpecStringWrapper("be assignable to another variable of the underlying type").in({
+[INFO]     val b: Int = uk.ac.liv.oforero.metadata.plain.Metadata.meta2Any[Int](a);
+[INFO]     MetadataSpec.this.assert(a.==(b));
+[INFO]     MetadataSpec.this.assert(b.==(a))
+[INFO]   })
+[INFO] })(MetadataSpec.this.subjectRegistrationFunction)
+[INFO] tree has: class scala.reflect.generic.Trees$Apply
+[INFO] Processing tree: MetadataSpec.this.convertToStringShouldWrapper("enriched with metadata").should({
+[INFO]   import uk.ac.liv.oforero.metadata.plain.Metadata._;
+[INFO]   val a: uk.ac.liv.oforero.metadata.Metadata[Int] = uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true));
+[INFO]   MetadataSpec.this.convertToWordSpecStringWrapper("be equal to other without metadata").in({
+[INFO]     MetadataSpec.this.assert(a.==(5));
+[INFO]     MetadataSpec.this.assert(a.hasMeta);
+[INFO]     MetadataSpec.this.assert(a.hasMeta("serializable"));
+[INFO]     MetadataSpec.this.assert(5.==(a));
+[INFO]     var c: Int = 3;
+[INFO]     MetadataSpec.this.assert(c.+(2).==(a))
+[INFO]   });
+[INFO]   MetadataSpec.this.convertToWordSpecStringWrapper("be assignable to another variable of the underlying type").in({
+[INFO]     val b: Int = uk.ac.liv.oforero.metadata.plain.Metadata.meta2Any[Int](a);
+[INFO]     MetadataSpec.this.assert(a.==(b));
+[INFO]     MetadataSpec.this.assert(b.==(a))
+[INFO]   })
+[INFO] })
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.convertToStringShouldWrapper("enriched with metadata")
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5).addMeta(scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.any2Metadata[Int](5)
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable").?[Boolean](true)
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: scala.this.Predef.any2ArrowAssoc[java.lang.String]("serializable")
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: MetadataSpec.this.convertToWordSpecStringWrapper("be equal to other without metadata").in({
+[INFO]   MetadataSpec.this.assert(a.==(5));
+[INFO]   MetadataSpec.this.assert(a.hasMeta);
+[INFO]   MetadataSpec.this.assert(a.hasMeta("serializable"));
+[INFO]   MetadataSpec.this.assert(5.==(a));
+[INFO]   var c: Int = 3;
+[INFO]   MetadataSpec.this.assert(c.+(2).==(a))
+[INFO] })
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.convertToWordSpecStringWrapper("be equal to other without metadata")
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.assert(a.==(5))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.assert(a.hasMeta)
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.assert(a.hasMeta("serializable"))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: a.hasMeta("serializable")
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.assert(5.==(a))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] swapping class java.lang.String
+[INFO] Processing tree: MetadataSpec.this.assert(c.+(2).==(a))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] swapping class java.lang.String
+[INFO] Processing tree: c.+(2)
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.convertToWordSpecStringWrapper("be assignable to another variable of the underlying type").in({
+[INFO]   val b: Int = uk.ac.liv.oforero.metadata.plain.Metadata.meta2Any[Int](a);
+[INFO]   MetadataSpec.this.assert(a.==(b));
+[INFO]   MetadataSpec.this.assert(b.==(a))
+[INFO] })
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.convertToWordSpecStringWrapper("be assignable to another variable of the underlying type")
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: uk.ac.liv.oforero.metadata.plain.Metadata.meta2Any[Int](a)
+[INFO] tree has: class scala.reflect.generic.Trees$TypeApply
+[INFO] Processing tree: MetadataSpec.this.assert(a.==(b))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] Processing tree: MetadataSpec.this.assert(b.==(a))
+[INFO] tree has: class scala.reflect.generic.Trees$Select
+[INFO] swapping class java.lang.String
+[INFO] prepare-compile in 0 s
+[INFO] compile in 5 s
+[INFO] [surefire:test {execution: default-test}]
+[INFO] Surefire report directory: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running uk.ac.liv.oforero.metadata_it.MetadataSpec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.35 sec
+An object (when enriched with metadata) should be equal to other without metadata(uk.ac.liv.oforero.metadata_it.MetadataSpec)  Time elapsed: 0.005 sec
+An object (when enriched with metadata) should be assignable to another variable of the underlying type(uk.ac.liv.oforero.metadata_it.MetadataSpec)  Time elapsed: 0 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] [jar:jar {execution: default-jar}]
+[INFO] Building jar: /Users/Oscar/Projects/dissertation/implementation/Scala/metadata-plugin/src/it/test-plugin-project/target/metadata-plugin-it-1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 12 seconds
+[INFO] Finished at: Sun Jul 25 00:48:59 CEST 2010
+[INFO] Final Memory: 35M/81M
+[INFO] ------------------------------------------------------------------------
