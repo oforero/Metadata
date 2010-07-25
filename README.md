@@ -1,78 +1,13 @@
 # Reflector: Scala Reflection Utilities
 
 Early days.
-Currently only supports companion objects and classes.
+Currently only supports Metadata by a library trick
+and with the compilers
 
-## Direct Usage
+## Usage
 
-      class MyClass
-      object MyClass
+Instructions will follow
 
-      val obj = companionOf[MyClass]
-      val cls = companionObjectOf[MyClass]
-
-OR
-
-      def myMethod [C](implicit m: Manifest[C]) {
-        val obj = companionOf(m)
-        // do stuff with obj
-      }
-
-## Pattern Matching
-
-      class MyClass
-      object MyClass
-
-      // match a class against companion objects
-      classOf[MyClass] match {
-        case Companion(`MyClass`) => // do something
-        case _ => // no match
-      }
-
-      // extract companion objects
-      classOf[MyClass] match {
-        case Companion(obj) => // do something with obj
-        case _ => // no match
-      }
-
-      // match a companion against classes
-      val CLASS = classOf[MyClass]
-      MyClass match {
-        case Companion(CLASS) => // do something with
-        case _ => // no match
-      }
-
-      // extract companion class
-      MyClass match {
-        case Companion(cls) => // do something with cls
-        case _ => // no match
-      }
-
-## Pattern Matching against Type Parameters:
-
-      @RunWith(classOf[JUnitRunner])
-      class TypeParametersSpec extends FlatSpec with Assertions {
-
-        val t0 = new C0
-        val t1 = new C1(new T1)
-        val t2 = new C2(new T1, new T2)
-        val t3 = new C3(new T1, new T2, new T3)
-
-        val t1w2t3 = new C3(new T1, new W2, new T3)
-
-        /** Test for Type Parameters **/
-        "Matching against the type parameters" should "find the type parameter class" in {
-          t1 match {
-            case TypeParameters(p1) ⇒ assert(p1 === classOf[T1])
-            case _ ⇒ fail
-          }
-
-
-          val TypeParameters(p1, p2) = t2
-          assert((p1, p2) === (classOf[T1], classOf[T2]))
-        }
-
-      }
 
 ## License
 
