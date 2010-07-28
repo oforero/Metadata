@@ -4,7 +4,7 @@ object MetadataIT {
   import scalajutsu.experimental.metadata.plain.Metadata._
 
   def doStuff {
-    assert( 5 == (5 addMeta ("serializable" → true)))
-    assert( (5 addMeta ("serializable" → true)) == 5)
+    assert( 5 == (5 addMeta ("serializable" -> true)))
+    assert( (5 addMeta ("serializable" -> true)) == 5)
   }
 }

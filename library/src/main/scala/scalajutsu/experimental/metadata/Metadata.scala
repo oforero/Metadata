@@ -14,39 +14,57 @@
 package scalajutsu.experimental.metadata
 
 /**
- * TODO: Write description here!!
+ * Base trait for a Metadata class
  *
  * @author Oscar Forero
  * @version 1.0
  * 
- * Date: Apr 18, 2010
- * Time: 3:47:46 PM
- * 
  */
-
-
 trait Metadata[T] {
   protected var metadata: Map[String, Any]
   protected[metadata] val value: T
 
+  /**
+   * Add an object to the metadata map
+   */
   def addMeta(meta: (String, Any)): Metadata[T] = {
     metadata += meta
     this
   }
 
-  def hasMeta = ! metadata.isEmpty 
+  /**
+   * True if it has any metadata in the map
+   */
+  def hasMeta = ! metadata.isEmpty
+
+  /**
+   * True if the key exists in the map
+   */
   def hasMeta(key: String) = metadata.contains(key)
 
+  /**
+   * Equals implementation making the metadata disappear
+   */
   override def equals(other: Any) = other match {
     case other: Metadata[t] => this.value == other.value
     case _ => value == other
   }
 
+
+  /**
+   * hashCode implementation making the metadata disappear
+   */
   override lazy val hashCode = value.hashCode
 }
 
 
-
+/**
+ * Base class for metadata companions proving the implicit conversions
+ *
+ * @author Oscar Forero
+ * @version 1.0
+ *
+ */
 abstract class MetadataCompanion {
 
   protected def builder[T](value: T): Metadata[T]

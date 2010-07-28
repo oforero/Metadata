@@ -292,7 +292,6 @@
     </plugins>
   </build>
 
-  <!-- TODO: Not sure what is the benefit of this one -->
   <reporting>
     <plugins>
       <plugin>

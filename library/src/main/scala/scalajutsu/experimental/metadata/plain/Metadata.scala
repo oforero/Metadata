@@ -10,21 +10,29 @@
  *   All rights reserved.
  *
  */
+
 package scalajutsu.experimental.metadata.plain
 
-import scalajutsu.experimental.metadata.{MetadataCompanion, Metadata ⇒ TMeta}
+import scalajutsu.experimental.metadata.{MetadataCompanion, Metadata => TMeta}
+
 /**
- * TODO: Write description here!!
+ * Plain metadata class
  *
  * @author Oscar Forero
  * @version 1.0
  *  
  */
-
 class Metadata[T](val value: T) extends TMeta[T] {
   protected var metadata = Map[String, Any]()
 }
 
+/**
+ * Companion to the plain metadata class 
+ *
+ * @author Oscar Forero
+ * @version 1.0
+ *
+ */
 object Metadata extends MetadataCompanion {
   protected def builder[T](value: T): Metadata[T] = new Metadata(value)
 }

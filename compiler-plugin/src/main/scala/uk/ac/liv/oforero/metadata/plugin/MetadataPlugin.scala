@@ -13,7 +13,11 @@
 package scalajutsu.experimental.metadata.plugin
 
 /**
- * TODO: Write description here!!
+ * A compiler plugin that makes metadata equality work
+ * when a metadata is on the right side of a logical ==
+ * it swaps the branches of the tree
+ * in that way the equals implementation of the
+ * metadata object is applied 
  *
  * @author Oscar Forero
  * @version 1.0
@@ -61,7 +65,7 @@ class MetadataPlugin(val global: Global) extends Plugin {
 
       override def transform(tree: Tree) = {
         tree match {
-          case old@Apply(sel@Select(left,  Name("$eq$eq")), List(right)) ⇒ {
+          case old@Apply(sel@Select(left,  Name("$eq$eq")), List(right)) => {
             if((left.tpe ne right.tpe) && right.tpe.toString.startsWith("uk.ac.liv.oforero.metadata.Metadata")) {
 //              val newTree: Apply = swapTree(old, sel, left, right)
 //              println("Processed tree: " + newTree)
@@ -72,14 +76,14 @@ class MetadataPlugin(val global: Global) extends Plugin {
               super.transform(old)
             }
           }
-          case t ⇒ {
+          case t => {
             t match {
-              case old@Apply(sel, List(right)) ⇒ {
+              case old@Apply(sel, List(right)) => {
                 println("Processing tree: " + old)
                 println("tree has: " + sel.getClass)
                 old
               }
-              case x ⇒ x
+              case x => x
             }
             super.transform(t)
           }
